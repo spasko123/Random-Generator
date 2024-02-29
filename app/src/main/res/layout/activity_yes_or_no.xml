@@ -130,7 +130,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_horizontal3" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgBack"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"

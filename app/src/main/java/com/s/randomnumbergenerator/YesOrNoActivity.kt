@@ -2,6 +2,7 @@ package com.s.randomnumbergenerator
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +26,7 @@ class YesOrNoActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private lateinit var txtAnswer: TextView
     private lateinit var tts: TextToSpeech
     private lateinit var imgSound: ImageView
+    private lateinit var imgBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ class YesOrNoActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         imgGirl = findViewById(R.id.imgGirl)
         txtAnswer = findViewById(R.id.txtAnswer)
         imgSound = findViewById(R.id.imgSound)
+        imgBack = findViewById(R.id.imgBack)
 
         tts = TextToSpeech(this, this)
 
@@ -51,6 +54,11 @@ class YesOrNoActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 isSoundOn = true
                 imgSound.setImageResource(R.drawable.sound_on)
             }
+        }
+
+        imgBack.setOnClickListener(){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         imgBtn.setOnClickListener(){

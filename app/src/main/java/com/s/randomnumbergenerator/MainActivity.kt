@@ -15,9 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         yesOrNo = findViewById(R.id.yesOrNo)
 
-        yesOrNo.setOnClickListener(){
+        yesOrNo.setOnClickListener {
             val intent = Intent(this, YesOrNoActivity::class.java)
             startActivity(intent)
         }
     }
 }
+
