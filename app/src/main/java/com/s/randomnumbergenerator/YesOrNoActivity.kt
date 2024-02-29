@@ -96,11 +96,9 @@ class YesOrNoActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             val result = tts.setLanguage(Locale.US)
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 // Language data is missing or the language is not supported.
-                // Handle error accordingly.
             }
         } else {
             // Initialization failed.
-            // Handle error accordingly.
         }
     }
 
