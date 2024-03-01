@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         yesOrNo = findViewById(R.id.yesOrNo)
+        //test ofr github
 
         yesOrNo.setOnClickListener {
             val intent = Intent(this, YesOrNoActivity::class.java)
