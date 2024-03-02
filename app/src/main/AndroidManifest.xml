@@ -17,6 +17,9 @@
         android:theme="@style/Theme.RandomNumberGenerator"
         tools:targetApi="31">
         <activity
+            android:name=".RandomWordActivity"
+            android:exported="false" />
+        <activity
             android:name=".YesOrNoActivity"
             android:exported="false"
             android:label="@string/title_activity_yes_or_no"
