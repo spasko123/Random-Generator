@@ -57,6 +57,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.07" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
     <ImageView
         android:id="@+id/imgGirl"
         android:layout_width="0dp"
@@ -74,17 +87,17 @@
         android:id="@+id/txtTitle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
         android:autoSizeTextType="uniform"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/vollkorn_bold"
         android:gravity="center"
         android:text="Yes or No?"
         android:textColor="#F4DC7D"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -101,7 +114,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal"></TextView>
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal" />
 
     <ImageView
         android:id="@+id/imgBtn"
@@ -135,20 +148,16 @@
         android:id="@+id/imgBack"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal8"
         app:layout_constraintEnd_toStartOf="@+id/txtTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtTitle"
-        app:srcCompat="@drawable/backwards_arrow" />
+        app:srcCompat="@drawable/img_back" />
 
     <ImageView
         android:id="@+id/imgSound"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="10dp"
-        android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtTitle"

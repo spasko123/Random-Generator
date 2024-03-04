@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#282C35"
-    tools:context=".RandomWordActivity">
+    tools:context=".RollDiceActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal"
@@ -38,6 +38,18 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,25 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:autoSizeMaxTextSize="52sp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/oswald_bold"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="..."
-        android:textColor="#F4DC7D"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal5" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <TextView
         android:id="@+id/textView2"
@@ -77,7 +71,7 @@
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/bebas_neue"
         android:gravity="center"
-        android:text="Press the button to get a random word"
+        android:text="Press the button to roll the dice"
         android:textColor="#E8D070"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,11 +110,32 @@
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/vollkorn_bold"
         android:gravity="center"
-        android:text="Random Word"
+        android:text="Roll Dice"
         android:textColor="#F4DC7D"
         app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal5"
         app:layout_constraintEnd_toStartOf="@+id/guideline_vertical2"
         app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgSound"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical2"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:srcCompat="@drawable/sound_off" />
+
+    <ImageView
+        android:id="@+id/imgDice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal6"
+        app:srcCompat="@drawable/dice1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

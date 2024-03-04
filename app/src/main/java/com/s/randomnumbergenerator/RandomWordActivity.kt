@@ -2,6 +2,7 @@ package com.s.randomnumbergenerator
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -24,13 +25,14 @@ class RandomWordActivity : AppCompatActivity() {
     private lateinit var randomWordService: RandomWordService
     lateinit var textView: TextView
     lateinit var imgBtn: ImageView
-
+    lateinit var imgBack: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random_word)
 
         textView = findViewById(R.id.textView)
         imgBtn = findViewById(R.id.imgBtn)
+        imgBack = findViewById(R.id.imgBack)
 
         retrofit = Retrofit.Builder()
             .baseUrl("https://random-word-api.herokuapp.com")
@@ -38,7 +40,6 @@ class RandomWordActivity : AppCompatActivity() {
             .build()
 
         randomWordService = retrofit.create(RandomWordService::class.java)
-        fetchRandomWord()
 
         imgBtn.setOnClickListener(){
             fetchRandomWord()
@@ -48,6 +49,11 @@ class RandomWordActivity : AppCompatActivity() {
             scaleAnimatorSet.playTogether(scaleX, scaleY)
             scaleAnimatorSet.duration = 200
             scaleAnimatorSet.start()
+        }
+
+        imgBack.setOnClickListener(){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
