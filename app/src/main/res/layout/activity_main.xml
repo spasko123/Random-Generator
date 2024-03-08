@@ -145,6 +145,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/flipACoin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"

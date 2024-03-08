@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var yesOrNo: ConstraintLayout
     lateinit var conLayoutRandomWord: ConstraintLayout
     lateinit var rollDice: ConstraintLayout
+    lateinit var flipACoin: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         yesOrNo = findViewById(R.id.yesOrNo)
         conLayoutRandomWord = findViewById(R.id.conLayoutRandomWord)
         rollDice = findViewById(R.id.rollDice)
+        flipACoin = findViewById(R.id.flipACoin)
 
         yesOrNo.setOnClickListener {
             val intent = Intent(this, YesOrNoActivity::class.java)
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         }
         rollDice.setOnClickListener {
             val intent = Intent(this, RollDiceActivity::class.java)
+            startActivity(intent)
+        }
+        flipACoin.setOnClickListener {
+            val intent = Intent(this, FlipACoinActivity::class.java)
             startActivity(intent)
         }
     }
